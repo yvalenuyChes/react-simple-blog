@@ -1,0 +1,26 @@
+@import '../../styles/mixins';
+
+.wrapper{
+   position: absolute;
+   top: 50%;
+	left: 50%;
+	transform: translate( -50%,-50%);
+   width: 600px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.buttons{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.link{
+   a{
+      @include link;
+   }
+  
+}

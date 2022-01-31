@@ -1,0 +1,31 @@
+@import '../../styles/mixins';
+
+.blog__title{
+   text-align: center;
+   padding: 40px 0;
+   font-size: 24px;
+   font-weight: 600;
+}
+
+.card__list{
+   @include container;
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr; 
+   grid-template-rows: auto; 
+   gap: 20px; 
+
+   li{
+      justify-self: center;
+      align-self: center;
+   }
+}
+
+.blog{
+
+   &__button{
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+   }
+}

@@ -1,0 +1,18 @@
+@mixin container  {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+
+@mixin link{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   background-color: royalblue;
+   height: 40px;
+   color: white;
+   border-radius: 5px;
+   font-size: 18px;
+}
