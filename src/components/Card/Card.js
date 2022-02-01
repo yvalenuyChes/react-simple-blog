@@ -12,7 +12,7 @@ export const Card = ({title, content, id}) =>{
          <div className={classes.card__link}>
             <Link
                key={id} 
-               to={`/editing/${id}`}
+               to={`/editing/${title}`}
             >перейти</Link>
          </div>
          

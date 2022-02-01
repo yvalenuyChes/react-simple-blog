@@ -1,5 +1,5 @@
 /* eslint-disable eqeqeq */
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button } from "../../components/Button/Buttons"
 import { cards } from "../../DB/DB"
@@ -13,9 +13,14 @@ export const EditCard = () => {
       content:''
    })
 
+   const [card, setCard] = useState({
+      title:'',
+      content:''
+   })
+
    const navigate = useNavigate()
 
-   const {id} = useParams()
+   const {id, title} = useParams()
 
    function deleteCard(){
       cards.splice(id, 1)
@@ -23,16 +28,24 @@ export const EditCard = () => {
    }
 
    function editCard(){
-      const card = cards.find(item => item.id == id)
+      const card = cards.find(item => item.title == title)
       card.title = value.title.trim()
       card.content = value.content.trim()
       navigate('/')
    }
 
+   useEffect(() =>{
+      const thisCard = cards.find(item => item.title == title)
+      setCard({
+         title:thisCard.title,
+         content: thisCard.content
+      })
+   }, [])
+
    return(
      <div className={classes.wrapper}>
         <input 
-        placeholder={cards[id].title} 
+        placeholder={card.title} 
         value={value.title} 
         onChange={event => setValue(
            {
@@ -42,7 +55,7 @@ export const EditCard = () => {
            )} />
 
         <textarea 
-        placeholder={cards[id].content} 
+        placeholder={card.content} 
         value={value.content} 
         onChange={event => setValue(
            {

@@ -18,7 +18,7 @@ export const PopupAddCard = () =>{
       cards.push({
          title:value.title,
          content: value.content,
-         id:cards.length
+         id:(cards.length * (Math.random() * 100)) + (Math.random() * 100)
       })
       dispatch({type:'CLOSE_POPUP'})
       
