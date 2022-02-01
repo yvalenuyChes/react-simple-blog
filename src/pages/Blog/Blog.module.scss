@@ -1,5 +1,9 @@
 @import '../../styles/mixins';
 
+.blog__container{
+   position: relative;
+}
+
 .blog__title{
    text-align: center;
    padding: 40px 0;
@@ -9,7 +13,8 @@
 
 .card__list{
    @include container;
-
+   height: 600px;
+   overflow: auto;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr; 
    grid-template-rows: auto; 

@@ -1,23 +1,23 @@
 export const cards = [
    {
-      id:0,
-      title:'first title',
-      content:'content 1'
-   },
-   {
       id:1,
-      title:'2 title',
-      content:'content 2'
+      title:'Первый пост',
+      content:'Первый пост'
    },
    {
       id:2,
-      title:'3 title',
-      content:'content 3'
+      title:'Второй пост',
+      content:'Второй пост'
    },
    {
       id:3,
-      title:'4 title',
-      content:'content 4'
+      title:'Третий пост',
+      content:'Третий пост'
+   },
+   {
+      id:4,
+      title:'Четвертый пост',
+      content:'Четвертый пост'
    },
 
 ]

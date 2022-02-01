@@ -16,7 +16,7 @@ export const Blog = () => {
 
    return(
       <div className={classes.blog__container}>
-         <h2 className={classes.blog__title}>Blog</h2>
+         <h2 className={classes.blog__title}>Блог</h2>
          <div className={classes.blog__card_wrapper}>
          <ul className={classes.card__list}>
          {

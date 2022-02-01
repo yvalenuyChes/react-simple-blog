@@ -1,6 +1,12 @@
 @import '../../styles/mixins';
 
 .wrapper{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.edit_card_block{
    position: absolute;
    top: 50%;
 	left: 50%;
@@ -10,6 +16,25 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+
+   h2{
+      padding: 10px 0px;
+      font-weight: 600;
+
+      span{
+         font-weight: normal;
+         width: 400px;
+      }
+   }
+
+   input,
+   textarea{
+      width: 300px;
+      margin: 0 0 20px 0;
+      padding: 10px 5px;
+      border: 1px solid #000;
+      border-radius: 5px;
+   }
 }
 
 .buttons{
@@ -23,4 +48,24 @@
       @include link;
    }
   
+}
+
+
+.warning{
+   padding: 20px;
+   border: 1px solid rgba($color: red, $alpha: .4);
+   border-radius: 5px;
+   position: absolute;
+   width: 450px;
+   left: 50%;
+	transform: translate( -50%, 20%);
+
+   &__title{
+      text-align: center;
+   }
+
+   &__buttons{
+      display: flex;
+      justify-content: space-between;
+   }
 }

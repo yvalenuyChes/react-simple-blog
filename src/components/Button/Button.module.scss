@@ -1,6 +1,9 @@
 .button__wrapper{
    padding: 20px 0;
    width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
    button{
       line-height: 40px;

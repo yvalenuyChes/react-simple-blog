@@ -24,7 +24,9 @@
       height: 150px;
       border:1px solid #000;
       border-radius: 5px;
-      overflow: auto;
+      white-space: pre-line;
+      overflow-x: hidden;
+      overflow-y: auto;
    }
 
    &__link {

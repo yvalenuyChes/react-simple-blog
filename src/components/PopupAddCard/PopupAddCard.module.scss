@@ -1,6 +1,8 @@
 .modal_window{
-   width: 450px;
+   width: 400px;
    position: absolute;
+   bottom: -200px;
+   left: 10px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -10,14 +12,28 @@
    input,
    textarea{
       border: 1px solid #000;
-      width: 80%;
-      padding: 10px 0;
+     
+      padding: 10px 5px;
       margin: 10px 0;
    }
+
+   input{
+      width: 200px;
+   }
+
+   textarea{
+      width: 180px;
+   }
+
+  
 
    &__buttons{
       width: 100%;
       display: flex;
       justify-content: space-between;
+
+      button{
+         width: 150px;
+      }
    }
 }

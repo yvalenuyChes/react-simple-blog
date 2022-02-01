@@ -17,8 +17,8 @@ export const PopupAddCard = () =>{
    function createNewCard(){
       cards.push({
          title:value.title,
-         content: value.content,
-         id:(cards.length * (Math.random() * 100)) + (Math.random() * 100)
+         content: `${value.content}`,
+         id:((cards.length + 1) * Math.floor( (Math.random() * 100) + (Math.random() * 100) )) 
       })
       dispatch({type:'CLOSE_POPUP'})
       
@@ -31,7 +31,7 @@ export const PopupAddCard = () =>{
    return(
       <div className={classes.modal_window}>
          <input 
-         placeholder="title" 
+         placeholder="Заголовок" 
          value={value.title} 
          onChange={event => setValue(
             {
@@ -41,8 +41,9 @@ export const PopupAddCard = () =>{
           )} 
 
          />
+         <p>(Переносите текст вручную с помощью Enter)</p>
          <textarea 
-         placeholder="Content" 
+         placeholder="Контент" 
          value={value.content} 
          onChange={event => setValue(
             {
